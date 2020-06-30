@@ -16,6 +16,20 @@
 		0475F3D524A9E6FA00F678E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475F3D424A9E6FA00F678E9 /* main.m */; };
 		0475F3DF24A9E6FA00F678E9 /* SearchHistoryAndHotDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475F3DE24A9E6FA00F678E9 /* SearchHistoryAndHotDemoTests.m */; };
 		0475F3EA24A9E6FB00F678E9 /* SearchHistoryAndHotDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475F3E924A9E6FB00F678E9 /* SearchHistoryAndHotDemoUITests.m */; };
+		047D1BC824AADEC70050E248 /* GTHistorySearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D1BB224AADEC70050E248 /* GTHistorySearchModel.m */; };
+		047D1BC924AADEC70050E248 /* GTHistorySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D1BB724AADEC70050E248 /* GTHistorySectionView.m */; };
+		047D1BCA24AADEC70050E248 /* GTHistorySectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BB824AADEC70050E248 /* GTHistorySectionView.xib */; };
+		047D1BCB24AADEC70050E248 /* GTHistorySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D1BB924AADEC70050E248 /* GTHistorySearchView.m */; };
+		047D1BCC24AADEC70050E248 /* GTHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D1BBB24AADEC70050E248 /* GTHistoryCell.m */; };
+		047D1BCD24AADEC70050E248 /* GTHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BBD24AADEC70050E248 /* GTHotCell.xib */; };
+		047D1BCE24AADEC70050E248 /* GTHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BBF24AADEC70050E248 /* GTHistoryCell.xib */; };
+		047D1BCF24AADEC70050E248 /* GTHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D1BC024AADEC70050E248 /* GTHotCell.m */; };
+		047D1BD024AADEC70050E248 /* delectIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC224AADEC70050E248 /* delectIcon.png */; };
+		047D1BD124AADEC70050E248 /* delectIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC324AADEC70050E248 /* delectIcon@3x.png */; };
+		047D1BD224AADEC70050E248 /* delectIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC424AADEC70050E248 /* delectIcon@2x.png */; };
+		047D1BD324AADEC70050E248 /* clearIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC524AADEC70050E248 /* clearIcon.png */; };
+		047D1BD424AADEC70050E248 /* clearIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC624AADEC70050E248 /* clearIcon@3x.png */; };
+		047D1BD524AADEC70050E248 /* clearIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D1BC724AADEC70050E248 /* clearIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +68,25 @@
 		0475F3E524A9E6FB00F678E9 /* SearchHistoryAndHotDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchHistoryAndHotDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0475F3E924A9E6FB00F678E9 /* SearchHistoryAndHotDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryAndHotDemoUITests.m; sourceTree = "<group>"; };
 		0475F3EB24A9E6FB00F678E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047D1BB224AADEC70050E248 /* GTHistorySearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHistorySearchModel.m; sourceTree = "<group>"; };
+		047D1BB324AADEC70050E248 /* GTHistorySearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHistorySearchModel.h; sourceTree = "<group>"; };
+		047D1BB524AADEC70050E248 /* GTHistorySectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHistorySectionView.h; sourceTree = "<group>"; };
+		047D1BB624AADEC70050E248 /* GTHistorySearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHistorySearchView.h; sourceTree = "<group>"; };
+		047D1BB724AADEC70050E248 /* GTHistorySectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHistorySectionView.m; sourceTree = "<group>"; };
+		047D1BB824AADEC70050E248 /* GTHistorySectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTHistorySectionView.xib; sourceTree = "<group>"; };
+		047D1BB924AADEC70050E248 /* GTHistorySearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHistorySearchView.m; sourceTree = "<group>"; };
+		047D1BBB24AADEC70050E248 /* GTHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHistoryCell.m; sourceTree = "<group>"; };
+		047D1BBC24AADEC70050E248 /* GTHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHotCell.h; sourceTree = "<group>"; };
+		047D1BBD24AADEC70050E248 /* GTHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTHotCell.xib; sourceTree = "<group>"; };
+		047D1BBE24AADEC70050E248 /* GTHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHistoryCell.h; sourceTree = "<group>"; };
+		047D1BBF24AADEC70050E248 /* GTHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTHistoryCell.xib; sourceTree = "<group>"; };
+		047D1BC024AADEC70050E248 /* GTHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHotCell.m; sourceTree = "<group>"; };
+		047D1BC224AADEC70050E248 /* delectIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delectIcon.png; sourceTree = "<group>"; };
+		047D1BC324AADEC70050E248 /* delectIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delectIcon@3x.png"; sourceTree = "<group>"; };
+		047D1BC424AADEC70050E248 /* delectIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delectIcon@2x.png"; sourceTree = "<group>"; };
+		047D1BC524AADEC70050E248 /* clearIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearIcon.png; sourceTree = "<group>"; };
+		047D1BC624AADEC70050E248 /* clearIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clearIcon@3x.png"; sourceTree = "<group>"; };
+		047D1BC724AADEC70050E248 /* clearIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clearIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +137,7 @@
 		0475F3C124A9E6F800F678E9 /* SearchHistoryAndHotDemo */ = {
 			isa = PBXGroup;
 			children = (
+				047D1BB024AADEC70050E248 /* SearchHistory */,
 				0475F3C224A9E6F800F678E9 /* AppDelegate.h */,
 				0475F3C324A9E6F800F678E9 /* AppDelegate.m */,
 				0475F3C524A9E6F800F678E9 /* SceneDelegate.h */,
@@ -135,6 +169,64 @@
 				0475F3EB24A9E6FB00F678E9 /* Info.plist */,
 			);
 			path = SearchHistoryAndHotDemoUITests;
+			sourceTree = "<group>";
+		};
+		047D1BB024AADEC70050E248 /* SearchHistory */ = {
+			isa = PBXGroup;
+			children = (
+				047D1BB124AADEC70050E248 /* SearchModel */,
+				047D1BB424AADEC70050E248 /* SearchView */,
+				047D1BBA24AADEC70050E248 /* SearchCell */,
+				047D1BC124AADEC70050E248 /* Resource */,
+			);
+			path = SearchHistory;
+			sourceTree = "<group>";
+		};
+		047D1BB124AADEC70050E248 /* SearchModel */ = {
+			isa = PBXGroup;
+			children = (
+				047D1BB224AADEC70050E248 /* GTHistorySearchModel.m */,
+				047D1BB324AADEC70050E248 /* GTHistorySearchModel.h */,
+			);
+			path = SearchModel;
+			sourceTree = "<group>";
+		};
+		047D1BB424AADEC70050E248 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				047D1BB524AADEC70050E248 /* GTHistorySectionView.h */,
+				047D1BB624AADEC70050E248 /* GTHistorySearchView.h */,
+				047D1BB724AADEC70050E248 /* GTHistorySectionView.m */,
+				047D1BB824AADEC70050E248 /* GTHistorySectionView.xib */,
+				047D1BB924AADEC70050E248 /* GTHistorySearchView.m */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		047D1BBA24AADEC70050E248 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				047D1BBB24AADEC70050E248 /* GTHistoryCell.m */,
+				047D1BBC24AADEC70050E248 /* GTHotCell.h */,
+				047D1BBD24AADEC70050E248 /* GTHotCell.xib */,
+				047D1BBE24AADEC70050E248 /* GTHistoryCell.h */,
+				047D1BBF24AADEC70050E248 /* GTHistoryCell.xib */,
+				047D1BC024AADEC70050E248 /* GTHotCell.m */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		047D1BC124AADEC70050E248 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				047D1BC224AADEC70050E248 /* delectIcon.png */,
+				047D1BC324AADEC70050E248 /* delectIcon@3x.png */,
+				047D1BC424AADEC70050E248 /* delectIcon@2x.png */,
+				047D1BC524AADEC70050E248 /* clearIcon.png */,
+				047D1BC624AADEC70050E248 /* clearIcon@3x.png */,
+				047D1BC724AADEC70050E248 /* clearIcon@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +333,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0475F3D224A9E6FA00F678E9 /* LaunchScreen.storyboard in Resources */,
+				047D1BD124AADEC70050E248 /* delectIcon@3x.png in Resources */,
 				0475F3CF24A9E6FA00F678E9 /* Assets.xcassets in Resources */,
+				047D1BD424AADEC70050E248 /* clearIcon@3x.png in Resources */,
+				047D1BCA24AADEC70050E248 /* GTHistorySectionView.xib in Resources */,
+				047D1BD324AADEC70050E248 /* clearIcon.png in Resources */,
 				0475F3CD24A9E6F800F678E9 /* Main.storyboard in Resources */,
+				047D1BD224AADEC70050E248 /* delectIcon@2x.png in Resources */,
+				047D1BD024AADEC70050E248 /* delectIcon.png in Resources */,
+				047D1BD524AADEC70050E248 /* clearIcon@2x.png in Resources */,
+				047D1BCD24AADEC70050E248 /* GTHotCell.xib in Resources */,
+				047D1BCE24AADEC70050E248 /* GTHistoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +369,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0475F3CA24A9E6F800F678E9 /* ViewController.m in Sources */,
+				047D1BCB24AADEC70050E248 /* GTHistorySearchView.m in Sources */,
+				047D1BC824AADEC70050E248 /* GTHistorySearchModel.m in Sources */,
+				047D1BC924AADEC70050E248 /* GTHistorySectionView.m in Sources */,
 				0475F3C424A9E6F800F678E9 /* AppDelegate.m in Sources */,
 				0475F3D524A9E6FA00F678E9 /* main.m in Sources */,
 				0475F3C724A9E6F800F678E9 /* SceneDelegate.m in Sources */,
+				047D1BCC24AADEC70050E248 /* GTHistoryCell.m in Sources */,
+				047D1BCF24AADEC70050E248 /* GTHotCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
