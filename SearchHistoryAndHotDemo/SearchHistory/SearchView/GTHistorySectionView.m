@@ -2,8 +2,8 @@
 //  GTHistorySectionView.m
 //  GTHistorySection
 //
-//  Created by Xdf on 2020/6/14.
-//  Copyright © 2020 Xdf. All rights reserved.
+//  Created by  星梦 on 2020/6/14.
+//  Copyright © 2020  星梦. All rights reserved.
 //
 
 
@@ -17,8 +17,8 @@
 }
 
 - (IBAction)clickClearButton:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(GTHistorySectionViewClear)]) {
-        [self.delegate GTHistorySectionViewClear];
+    if ([self.delegate respondsToSelector:@selector(zgt_historySectionViewClear)]) {
+        [self.delegate zgt_historySectionViewClear];
     }
 }
 @end

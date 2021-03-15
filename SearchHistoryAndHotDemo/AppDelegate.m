@@ -2,12 +2,12 @@
 //  AppDelegate.m
 //  SearchHistoryAndHotDemo
 //
-//  Created by Xdf on 2020/6/29.
-//  Copyright © 2020 Xdf. All rights reserved.
+//  Created by  星梦 on 2020/6/29.
+//  Copyright © 2020  星梦. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "TableViewListController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    TableViewListController * tableViewListController = [[TableViewListController alloc] init];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:tableViewListController];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

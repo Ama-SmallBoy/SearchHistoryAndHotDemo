@@ -2,8 +2,8 @@
 //  CSWarterTagsView.m
 //  WaterfallFlowTagsDemo
 //
-//  Created by Xdf on 2020/6/14.
-//  Copyright © 2020 Xdf. All rights reserved.
+//  Created by  星梦 on 2020/6/14.
+//  Copyright © 2020  星梦. All rights reserved.
 //
 
 #import "GTHistorySearchView.h"
@@ -11,6 +11,7 @@
 #import "GTHistoryCell.h"
 #import "GTHistorySectionView.h"
 #import "GTHistorySearchModel.h"
+#import "PublicConfig.h"
 
 #define kLRSpace 15.0 //左右边距
 #define kLineSpace 10.0 //行间距
@@ -23,15 +24,15 @@
 
 static NSString * GTHotCellID = @"GTHotCell";
 static NSString * GTHistoryCellID = @"GTHistoryCell";
+static NSString * GTHistorySectionViewID = @"GTHistorySectionView";
 
+@interface GTHistorySearchView ()<UICollectionViewDelegate,UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, GTHistorySectionViewDelegate, GTHistoryCelllDelegate>
 
-@interface GTHistorySearchView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,GTHistorySectionViewDelegate,GTHistoryCelllDelegate>
-
-@property(nonatomic,strong) UICollectionView * collectionView;
-@property (strong, nonatomic) SelectHistoryDataBlock selectHistoryBlock;
-@property (strong, nonatomic) DelectAllHistoryDataBlock delectAllHistoryBlock;
-@property (strong, nonatomic) DeletHistoryRowDataBlock delectHistoryRowBlock ;
-@property (strong, nonatomic) SelectOtherDataBlock selectOtherBlock;
+@property(nonatomic,strong) UICollectionView *collectionView;
+@property (copy, nonatomic) SelectHistoryDataBlock selectHistoryBlock;
+@property (copy, nonatomic) DelectAllHistoryDataBlock delectAllHistoryBlock;
+@property (copy, nonatomic) DeletHistoryRowDataBlock delectHistoryRowBlock ;
+@property (copy, nonatomic) SelectOtherDataBlock selectOtherBlock;
 
 //热门 数据源
 @property(nonatomic,strong) NSMutableArray * hotModels;
@@ -114,7 +115,7 @@ static NSString * GTHistoryCellID = @"GTHistoryCell";
     UICollectionReusableView *reusableview = nil;
     if ( [kind isEqualToString:UICollectionElementKindSectionHeader] ) {//顶部视图
         //获取顶部视图
-        GTHistorySectionView *headerV = (GTHistorySectionView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GTHistorySectionView" forIndexPath:indexPath];
+        GTHistorySectionView *headerV = (GTHistorySectionView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:GTHistorySectionViewID forIndexPath:indexPath];
         headerV.delegate = self;
         headerV.title_bl.textColor = self.titleColor;
         headerV.title_bl.font = self.titleFont;
@@ -220,7 +221,7 @@ static NSString * GTHistoryCellID = @"GTHistoryCell";
 #pragma mark -
 #pragma mark - coustom delegate
 // 清楚全部历史记录
-- (void)GTHistorySectionViewClear
+- (void)zgt_historySectionViewClear
 {
     // 删除全部历史记录
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确定清空历史搜索吗？" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -234,7 +235,7 @@ static NSString * GTHistoryCellID = @"GTHistoryCell";
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
 //清除历史记录
-- (void)GTHistoryCell:(UICollectionViewCell *)cell didDelectforIndexpath:(NSIndexPath *)indepath
+- (void)zgt_historyCell:(UICollectionViewCell *)cell didDelectforIndexpath:(NSIndexPath *)indepath
 {
     NSMutableArray * historyMutArry = self.historyArry.mutableCopy;
     [historyMutArry removeObjectAtIndex:indepath.row];
@@ -269,13 +270,13 @@ static NSString * GTHistoryCellID = @"GTHistoryCell";
 
 #pragma mark -
 #pragma mark - event Block 事件回调
--(void)GTHistorySearchViewWithSelectOtherBlock:(SelectOtherDataBlock)otherBlock SelectHistoryDataBlock:(SelectHistoryDataBlock)historyBlock
+-(void)zgt_historySearchViewWithSelectOtherBlock:(SelectOtherDataBlock)otherBlock selectHistoryDataBlock:(SelectHistoryDataBlock)historyBlock
 {
     self.selectOtherBlock = otherBlock;
     self.selectHistoryBlock = historyBlock;
 }
 
--(void)GTHistorySearchViewWithDelectAllHistoryBlock:(DelectAllHistoryDataBlock)delectAllHistoryBlock DeletHistoryRowDataBlock:(DeletHistoryRowDataBlock)delectHistoryRowBlock
+-(void)zgt_historySearchViewWithDelectAllHistoryBlock:(DelectAllHistoryDataBlock)delectAllHistoryBlock deletHistoryRowDataBlock:(DeletHistoryRowDataBlock)delectHistoryRowBlock
 {
     self.delectAllHistoryBlock = delectAllHistoryBlock;
     self.delectHistoryRowBlock = delectHistoryRowBlock;
@@ -295,9 +296,9 @@ static NSString * GTHistoryCellID = @"GTHistoryCell";
         UICollectionViewFlowLayout * flowLayout  = [[UICollectionViewFlowLayout alloc]init];
         _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
         _collectionView.backgroundColor = [UIColor whiteColor];
-        [_collectionView registerNib:[UINib nibWithNibName:GTHistoryCellID bundle:nil] forCellWithReuseIdentifier:GTHistoryCellID];
-        [_collectionView registerNib:[UINib nibWithNibName:GTHotCellID bundle:nil] forCellWithReuseIdentifier:GTHotCellID];
-        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GTHistorySectionView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GTHistorySectionView"];
+        [_collectionView registerNib:Nib_Name(GTHistoryCellID) forCellWithReuseIdentifier:GTHistoryCellID];
+        [_collectionView registerNib:Nib_Name(GTHotCellID) forCellWithReuseIdentifier:GTHotCellID];
+        [_collectionView registerNib:Nib_Name(GTHistorySectionViewID) forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:GTHistorySectionViewID];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         

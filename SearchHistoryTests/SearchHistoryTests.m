@@ -1,18 +1,18 @@
 //
-//  SearchHistoryAndHotDemoTests.m
-//  SearchHistoryAndHotDemoTests
+//  SearchHistoryTests.m
+//  SearchHistoryTests
 //
-//  Created by  星梦 on 2020/6/29.
+//  Created by  星梦 on 2020/12/9.
 //  Copyright © 2020  星梦. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface SearchHistoryAndHotDemoTests : XCTestCase
+@interface SearchHistoryTests : XCTestCase
 
 @end
 
-@implementation SearchHistoryAndHotDemoTests
+@implementation SearchHistoryTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
